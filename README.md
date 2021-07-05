@@ -1,12 +1,10 @@
 ### About the repo 
 
-This is a python package for adding and removing members from a twitter list using *other* twitter lists.
+This is a python package that makes it easier to add users to your Twitter list from other lists.
 
-Say you've created a covid twitter list to keep track of news around the pandemic. You've just found a curated list on covid by an epidemiologist in London, and you want to add members from that list to your own Covid list. This is the package you use for that.
+Say you've created a covid twitter list to keep track of news around the pandemic. You've just found another list on covid curated by an epidemiologist in London, and you want to add members from that list to your own Covid list. This is the package you use for that.
 
 This package will help heavy twitter and tweetdeck users, especially those those who use lists to manage the firehose of information that is social media.
-
-Have also written a [blog post](http://shijith.com/blog/twitter-list-management/) about why I coded this, but this README covers pretty much everything you need to know.
 
 
 ### How to install the package and set things up
@@ -50,7 +48,7 @@ tlm.add_to_list1_from_list2(list1, list2)
 tlm.add_to_list1_from_multiple_lists(list1, multiple_lists)
 ```
 
-**3.** Remove members from your list who are in another list with this method, 'list1' being your list. Let's say you have a twitter list that's a mix of designers and developers, and you want it to have designers only. You can remove many of the developers from it by getting a curated list of developers. Using this function, if any developer's in that list, they'll be removed from your list.
+**3.** Remove members from your list who are in another list with this method, 'list1' being your list. Let's say you have a twitter list that's a mix of designers and developers, and you want it to have designers only. You can remove many of the developers from it by getting a curated list of developers. Using this function, if any developers are in that list, they'll be removed from your list.
 ```
 tlm.remove_from_list1_based_on_list2(list1, list2)
 ```
