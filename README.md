@@ -16,23 +16,15 @@ This is mainly for heavy Twitter and Tweetdeck users, especially those those who
 
 ### How to install the package and set things up
 
-You can install it by going to the terminal and typing
-`pip install twitter_list_mgmt`
-
-You can install it by going to the terminal and typing  
-`pip install twitter_list_mgmt`
-
 You can install it by going to the terminal and typing  
 ```
 pip install twitter_list_mgmt
 ```
 
-You can install it by going to the terminal and typing  
-```pip install twitter_list_mgmt```
-
-
 Versions of Tweepy >= 4.0.0a0 are required for this package to work. At the time of writing, 4.0 is in alpha, so it might not be available from [pypi](https://pypi.org/project/tweepy/#history). Install it in the terminal by doing
-`pip install git+https://github.com/tweepy/tweepy.git`
+```
+pip install git+https://github.com/tweepy/tweepy.git
+```
 
 In terms of setting up, you'll have to [create](https://developer.twitter.com/) authentication credentials for yourself. (This [article](https://realpython.com/twitter-bot-python-tweepy/) from Realpython has a how-to on it.) Four text strings will be generated -- Consumer Key, Consumer Secret, Access Token and Access Token Secret. Create a file named 'config_twitter.ini', use the format below and paste in the credentials (You can also download a sample one [here](twitter_list_mgmt/config_twitter.ini))
 
