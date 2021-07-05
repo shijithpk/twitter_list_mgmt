@@ -30,10 +30,10 @@ In terms of setting up, you'll have to [create](https://developer.twitter.com/) 
 
 ```
 [info]
-CONSUMER_KEY = < Paste here >
-CONSUMER_SECRET = < Paste here >
-ACCESS_TOKEN = < Paste here >
-ACCESS_TOKEN_SECRET = < Paste here >
+CONSUMER_KEY = XXXXXX
+CONSUMER_SECRET = XXXXXX
+ACCESS_TOKEN = XXXXXX
+ACCESS_TOKEN_SECRET = XXXXXX
 ```
 
 ### How to use the package  
