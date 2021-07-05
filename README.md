@@ -8,11 +8,10 @@ This package performs the very specific task of adding and removing members from
 
 So say you've created a Covid Twitter list to keep track of news around the pandemic. You've just found a curated list on Covid by an epidemiologist in London, and you want to add members from that list to your own Covid list. This is the package you use to do it.
 
-Have also written a [blog post](http://shijith.com/blog/twitter-list-management/) about why I coded this, but this README will cover pretty much everything you need to know.
+This package will help heavy Twitter and Tweetdeck users, especially those those who use lists to manage the firehose of information.
 
-### Who this is for
+Have also written a [blog post](http://shijith.com/blog/twitter-list-management/) about why I coded this, but this README covers pretty much everything you need to know.
 
-This is mainly for heavy Twitter and Tweetdeck users, especially those those who use lists to manage the firehose of information.
 
 ### How to install the package and set things up
 
@@ -83,9 +82,9 @@ tlm.create_list_difference(list1,multiple_lists,list_name)
 
 ### Other things you can do
 
-The methods that have been listed are the main ones for the package. There are others too, but most people won't have to bother with them. Will go through some of them for coders who want to create their own functions on top of them. (Have a look at [helpers.py](twitter_list_mgmt/helpers.py) to see how they've been defined.)
+The methods that have been listed already are the main ones. There are other methods too, but most people won't have to bother with them. Will go through some of them for coders who want to create their own functions based on them. (Have a look at [helpers.py](twitter_list_mgmt/helpers.py) to see how they've been defined.)
 
-Here are some of the other methods:  
+These are some of the other methods:  
   
 * This one helps automate the fetching of list ids from list urls. Returns the list_id as a string.
 ```
