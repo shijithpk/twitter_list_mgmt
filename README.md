@@ -2,7 +2,7 @@
 
 This is a python package for adding and removing members from a Twitter list using *other* Twitter lists.
 
-Say you've created a Covid Twitter list to keep track of news around the pandemic. You've just found a curated list on Covid by an epidemiologist in London, and you want to add members from that list to your own Covid list. This is the package you use for that.
+Say you've created a covid Twitter list to keep track of news around the pandemic. You've just found a curated list on covid by an epidemiologist in London, and you want to add members from that list to your own Covid list. This is the package you use for that.
 
 This package will help heavy Twitter and Tweetdeck users, especially those those who use lists to manage the firehose of information that is social media.
 
@@ -21,7 +21,7 @@ Versions of Tweepy >= 4.0.0a0 are required for this package to work. At the time
 pip install git+https://github.com/tweepy/tweepy.git
 ```
 
-In terms of setting up, you'll have to [create](https://developer.twitter.com/) authentication credentials for yourself. (This [article](https://realpython.com/twitter-bot-python-tweepy/) from Realpython has a how-to on it.) Four text strings will be generated -- Consumer Key, Consumer Secret, Access Token and Access Token Secret. Create a file named 'config_twitter.ini', use the format below and paste in the credentials (You can also download a sample one [here](twitter_list_mgmt/config_twitter.ini))
+In terms of setting up, you'll have to [create](https://developer.twitter.com/) authentication credentials for yourself. (This [article](https://realpython.com/twitter-bot-python-tweepy/) from Realpython has a how-to on it.) Four text strings will be generated -- Consumer Key, Consumer Secret, Access Token and Access Token Secret. Create a file named 'config_twitter.ini', use the format below and paste in the credentials (You can also download a sample file [here](twitter_list_mgmt/config_twitter.ini))
 
 ```
 [info]
@@ -38,40 +38,40 @@ Import the package into your code with
 import twitter_list_mgmt as tlm
 ```
 
-Here are the main methods of the package:  
+There are 7 main methods in the package:  
 
-* This method allows you to add members to one of your lists from another list. Here list1 and list2 are twitter list ids, with list1 being the one you own. (You can get the ids from the url for a list page. For example, in the url https://twitter.com/i/lists/15299140 , the list id is '15299140'.)
+1. This method allows you to add members to one of your lists from another list. Here list1 and list2 are twitter list ids, with list1 being the one you own. (You can get the ids from the url for a list page. For example, in the url https://twitter.com/i/lists/15299140 , the list id is '15299140'.)
 ```
 tlm.add_to_list1_from_list2(list1, list2)
 ```
 
-* This is the same as the previous method, just that it adds to your list from several lists. 'multiple_lists' is a python list of twitter list ids.
+2. This is the same as the previous method, just that it adds to your list from several lists. 'multiple_lists' is a python list of twitter list ids.
 ```
 tlm.add_to_list1_from_multiple_lists(list1, multiple_lists)
 ```
 
-* Remove members from your list who are in another list with this method, 'list1' being your list. A possible use case for this would be if you have a twitter list that's a mix of designers and developers, and you want to make it designers only. You can remove many of the developers from it by getting a curated list of developers. Using this function, if anyone's in that list, they'll be removed from your list.
+3. Remove members from your list who are in another list with this method, 'list1' being your list. A possible use case for this would be if you have a twitter list that's a mix of designers and developers, and you want to make it designers only. You can remove many of the developers from it by getting a curated list of developers. Using this function, if anyone's in that list, they'll be removed from your list.
 
 ```
 tlm.remove_from_list1_based_on_list2(list1, list2)
 ```
 
-* This removes members from your list using several other twitter lists.
+4. This removes members from your list using several other twitter lists.
 ```
 tlm.remove_from_list1_based_on_multiple_lists(list1,multiple_lists)
 ```
 
-* This creates a new list that consolidates members from several lists. 'multiple_lists' is the python list containing the twitter list ids and 'list_name' is the name for the new list.
+5. This creates a new list that consolidates members from several lists. 'multiple_lists' is the python list containing the twitter list ids and 'list_name' is the name for the new list.
 ```
 tlm.create_list_union(multiple_lists,list_name)
 ```
 
-* This creates a new list that has members common to several lists. 'multiple_lists' is the python list containing the twitter list ids and 'list_name' is the name for the new list.
+6. This creates a new list that has members common to several lists. 'multiple_lists' is the python list containing the twitter list ids and 'list_name' is the name for the new list.
 ```
 tlm.create_list_intersection(multiple_lists,list_name)
 ```
 
-* This creates a new list which has all the members from 'list1' who aren't in any of the lists in 'multiple_lists'. 'list1' can be your own list or someone else's, 'multiple_lists' is a python list of twitter list ids and 'list_name' is the name for the new list.
+7. This creates a new list which has all the members from 'list1' who aren't in any of the lists in 'multiple_lists'. 'list1' can be your own list or someone else's, 'multiple_lists' is a python list of twitter list ids and 'list_name' is the name for the new list.
 ```
 tlm.create_list_difference(list1,multiple_lists,list_name)
 ```
