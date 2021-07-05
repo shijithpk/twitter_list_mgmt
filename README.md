@@ -2,7 +2,7 @@
 
 This is a python package for adding and removing members from a Twitter list using *other* Twitter lists.
 
-Say you've created a Covid Twitter list to keep track of news around the pandemic. You've just found a curated list on Covid by an epidemiologist in London, and you want to add members from that list to your own Covid list. This is the package lets you use for that.
+Say you've created a Covid Twitter list to keep track of news around the pandemic. You've just found a curated list on Covid by an epidemiologist in London, and you want to add members from that list to your own Covid list. This is the package you use for that.
 
 This package will help heavy Twitter and Tweetdeck users, especially those those who use lists to manage the firehose of information that is social media.
 
