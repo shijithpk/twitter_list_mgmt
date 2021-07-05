@@ -21,7 +21,7 @@ Versions of Tweepy >= 4.0.0a0 are required for this package to work. At the time
 pip install git+https://github.com/tweepy/tweepy.git
 ```
 
-In terms of setting up, you'll have to [create](https://developer.twitter.com/) authentication credentials for yourself. (This [article](https://realpython.com/twitter-bot-python-tweepy/) from Realpython has a how-to on it.) Four text strings will be generated -- Consumer Key, Consumer Secret, Access Token and Access Token Secret. Create a file named 'config_twitter.ini', use the format below and paste in the credentials (You can also download a sample file [here](twitter_list_mgmt/config_twitter.ini))
+In terms of setting up, you'll have to [create](https://developer.twitter.com/) authentication credentials for yourself. (This [article](https://realpython.com/twitter-bot-python-tweepy/) from Realpython has a how-to on it.) Four text strings will be generated -- Consumer Key, Consumer Secret, Access Token and Access Token Secret. Create a file named 'config_twitter.ini', use the format below and paste in the credentials (You can also download a sample file [here](twitter_list_mgmt/config_twitter.ini).)
 
 ```
 [info]
@@ -107,6 +107,6 @@ tlm.get_df_from_list(list_idx)
 ```
 
 ### Suggestions, criticism etc.
-I'm not a professional coder/developer/programmer, so am sure there are things here I should be doing differently. If you have any suggestions, please contact me on mail@shijith.com or at my twitter handle [@shijith](https://twitter.com/shijith).
+I'm not a professional developer/programmer/coder, so am sure there are things here I should be doing differently. If you have any suggestions, please contact me on mail@shijith.com or at my twitter handle [@shijith](https://twitter.com/shijith).
 
 For example, I would be especially interested in hearing about my python application layout, whether it could be simplified further, if I could be doing imports better etc.
