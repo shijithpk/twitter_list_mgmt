@@ -38,8 +38,10 @@ ACCESS_TOKEN_SECRET = < Paste here >
 
 ### How to use the package  
   
-Import the package into your code with  
-`import twitter_list_mgmt as tlm`
+Import the package into your code with
+```
+import twitter_list_mgmt as tlm
+```
 
 The main methods in the package are:  
   
