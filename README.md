@@ -83,7 +83,7 @@ tlm.create_list_difference(list1,multiple_lists,list_name)
 
 ### Other functions  
 
-The methods that have been listed are the main ones for the package. There are others, and most people won't have to bother with them. Will go through some of the other methods for coders who want to create their own functions. (Have a look at [helpers.py](twitter_list_mgmt/helpers.py) to see how they've been defined.)
+The methods that have been listed are the main ones for the package. There are others too, but most people won't have to bother with them. Will go through some of them for coders who want to create their own functions on top of them. (Have a look at [helpers.py](twitter_list_mgmt/helpers.py) to see how they've been defined.)
 
 Here are some of the other methods:  
   
