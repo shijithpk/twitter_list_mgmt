@@ -1,14 +1,10 @@
 ### About the repo 
 
-This is a python package for managing the membership of Twitter lists. 
+This is a python package for adding and removing members from a Twitter list using *other* Twitter lists.
 
-The [Tweepy](https://github.com/tweepy/tweepy) library (which is at the heart of this package/MAKE-LESS-CHEESY) takes care of almost everything you'd want to do with a Twitter list like retrieving the current membership, adding users to it, removing them etc.
+Say you've created a Covid Twitter list to keep track of news around the pandemic. You've just found a curated list on Covid by an epidemiologist in London, and you want to add members from that list to your own Covid list. This is the package lets you use for that.
 
-This package performs the very specific task of adding and removing members from a Twitter list using *other* Twitter lists.
-
-So say you've created a Covid Twitter list to keep track of news around the pandemic. You've just found a curated list on Covid by an epidemiologist in London, and you want to add members from that list to your own Covid list. This is the package you use to do it.
-
-This package will help heavy Twitter and Tweetdeck users, especially those those who use lists to manage the firehose of information.
+This package will help heavy Twitter and Tweetdeck users, especially those those who use lists to manage the firehose of information that is social media.
 
 Have also written a [blog post](http://shijith.com/blog/twitter-list-management/) about why I coded this, but this README covers pretty much everything you need to know.
 

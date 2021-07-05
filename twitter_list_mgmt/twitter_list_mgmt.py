@@ -51,6 +51,7 @@ def remove_from_list1_based_on_multiple_lists(list1,multiple_lists):
     intersection = intersection_of_lists(list1, union)
     remove_ids_from_list(intersection,list1)
 
+
 def create_list_union(multiple_lists,list_name):
     """
     Creates a new list which has all the members from all the lists in 'multiple_lists'. Max of 5000 members for a list. 'list_name' is the name you're giving the new list.
@@ -59,7 +60,9 @@ def create_list_union(multiple_lists,list_name):
     response = api.create_list(name=list_name)
     response_dict = dictify_tweepy(response)
     new_list_id = response_dict['id_str']
-    add_to_list1_from_list2(new_list_id, union)  
+    add_to_list1_from_list2(new_list_id, union)
+    print('New list created at https://twitter.com/i/lists/' + new_list_id)
+
 
 def create_list_intersection(multiple_lists,list_name):
     """
@@ -70,12 +73,13 @@ def create_list_intersection(multiple_lists,list_name):
     response_dict = dictify_tweepy(response)
     new_list_id = response_dict['id_str']
     add_to_list1_from_list2(new_list_id, intersection)
+    print('New list created at https://twitter.com/i/lists/' + new_list_id)
+
 
 def create_list_difference(list1,multiple_lists,list_name):
     """
     Creates a new list which has all the members in list1 who arent in any of the lists in 'multiple_lists'. 'list_name' is the name you're giving the new list.
     """
-
     union = union_of_lists(multiple_lists)
     intersection = intersection_of_lists(list1, union)
     difference = listA_minus_listB_difference(list1,intersection)
@@ -84,3 +88,4 @@ def create_list_difference(list1,multiple_lists,list_name):
     response_dict = dictify_tweepy(response)
     new_list_id = response_dict['id_str']
     add_to_list1_from_list2(new_list_id, difference)
+    print('New list created at https://twitter.com/i/lists/' + new_list_id)
