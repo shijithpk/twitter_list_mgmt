@@ -1,10 +1,10 @@
 ### About the repo 
 
-This is a python package for adding and removing members from a Twitter list using *other* Twitter lists.
+This is a python package for adding and removing members from a twitter list using *other* twitter lists.
 
-Say you've created a covid Twitter list to keep track of news around the pandemic. You've just found a curated list on covid by an epidemiologist in London, and you want to add members from that list to your own Covid list. This is the package you use for that.
+Say you've created a covid twitter list to keep track of news around the pandemic. You've just found a curated list on covid by an epidemiologist in London, and you want to add members from that list to your own Covid list. This is the package you use for that.
 
-This package will help heavy Twitter and Tweetdeck users, especially those those who use lists to manage the firehose of information that is social media.
+This package will help heavy twitter and tweetdeck users, especially those those who use lists to manage the firehose of information that is social media.
 
 Have also written a [blog post](http://shijith.com/blog/twitter-list-management/) about why I coded this, but this README covers pretty much everything you need to know.
 
@@ -40,7 +40,7 @@ import twitter_list_mgmt as tlm
 
 There are 7 main methods in the package:  
 
-1. This method allows you to add members to one of your lists from another list. Here list1 and list2 are twitter list ids, with list1 being the one you own. (You can get the ids from the url for a list page. For example, in the url twitter.com/i/lists/15299140 , the list id is '15299140'.)
+1. This method allows you to add members to one of your lists from another list. Here list1 and list2 are twitter list ids, with list1 being the one you own. (You can get the ids from the url for a list page. For example, in the url https://twitter.com/i/lists/15299140, the list id is '15299140'.)
 ```
 tlm.add_to_list1_from_list2(list1, list2)
 ```
@@ -50,8 +50,7 @@ tlm.add_to_list1_from_list2(list1, list2)
 tlm.add_to_list1_from_multiple_lists(list1, multiple_lists)
 ```
 
-3. Remove members from your list who are in another list with this method, 'list1' being your list. A possible use case for this would be if you have a twitter list that's a mix of designers and developers, and you want to make it designers only. You can remove many of the developers from it by getting a curated list of developers. Using this function, if anyone's in that list, they'll be removed from your list.
-
+3. Remove members from your list who are in another list with this method, 'list1' being your list. Let's say you have a twitter list that's a mix of designers and developers, and you want it to have designers only. You can remove many of the developers from it by getting a curated list of developers. Using this function, if any developer's in that list, they'll be removed from your list.
 ```
 tlm.remove_from_list1_based_on_list2(list1, list2)
 ```
@@ -78,7 +77,7 @@ tlm.create_list_difference(list1,multiple_lists,list_name)
 
 ### Other things you can do
 
-The methods that have been listed already are the main ones. There are other methods too, but most people won't have to bother with them. Will go through some of them for coders who want to create their own functions based on them. (Have a look at [helpers.py](twitter_list_mgmt/helpers.py) to see how they've been defined.)
+The methods that have been listed are the main ones. There are other methods too, but most people won't have a need for them. Will go through some of them for coders who want to create their own functions based on them. (Have a look at [helpers.py](twitter_list_mgmt/helpers.py) to see how they've been defined.)
 
 These are some of the other methods:  
   
