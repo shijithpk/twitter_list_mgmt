@@ -44,21 +44,24 @@ import twitter_list_mgmt as tlm
 ```
 
 The main methods in the package are:  
-  
+* This allows you to add members to one of your lists from another list. Here list1 and list2 are twitter list ids, with list1 being the one you own. You can get the ids from the url for a list page. For example, in the url https://twitter.com/i/lists/15299140 , the list id is '15299140'.
+
 ```
 tlm.add_to_list1_from_list2(list1, list2)
 ```
-This allow you to add members to one of your lists from another list. Here list1 and list2 are twitter list ids, with list1 being the one you own. You can get the ids from the url for a list page. For example, in the url https://twitter.com/i/lists/15299140 , the list id is '15299140'.
+
+* This is the same as the previous method, just that it adds to your list from several lists. 'multiple_lists' is a python list of twitter list ids.
 
 ```
 tlm.add_to_list1_from_multiple_lists(list1, multiple_lists)
 ```
-This is the same as the previous method, just that it adds to your list from several lists. 'multiple_lists' is a python list of twitter list ids.
+
+* Remove members from your list who are in another list with this method, 'list1' being your list. A possible use case for this would be if you have a twitter list that's a mix of designers and developers, and you want to make it designers only. You can remove many of the developers from it by getting a curated list of developers. Using this function, if anyone's in that list, they'll be removed from your list.
 
 ```
 tlm.remove_from_list1_based_on_list2(list1, list2)
 ```
-Remove members from your list who are in another list with this method, 'list1' being your list. A possible use case for this would be if you have a twitter list that's a mix of designers and developers, and you want to make it designers only. You can remove many of the developers from it by getting a curated list of developers. Using this function, if anyone's in that list, they'll be removed from your list.
+
 
 ```
 tlm.remove_from_list1_based_on_multiple_lists(list1,multiple_lists)
