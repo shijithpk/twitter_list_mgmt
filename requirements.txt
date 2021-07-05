@@ -1,2 +1,2 @@
-tweepy==3.8.0
+tweepy==4.0.0a0
 pandas==1.2.3
