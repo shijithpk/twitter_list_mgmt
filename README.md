@@ -19,6 +19,18 @@ This is mainly for heavy Twitter and Tweetdeck users, especially those those who
 You can install it by going to the terminal and typing
 `pip install twitter_list_mgmt`
 
+You can install it by going to the terminal and typing  
+`pip install twitter_list_mgmt`
+
+You can install it by going to the terminal and typing  
+```
+pip install twitter_list_mgmt
+```
+
+You can install it by going to the terminal and typing  
+```pip install twitter_list_mgmt```
+
+
 Versions of Tweepy >= 4.0.0a0 are required for this package to work. At the time of writing, 4.0 is in alpha, so it might not be available from [pypi](https://pypi.org/project/tweepy/#history). Install it in the terminal by doing
 `pip install git+https://github.com/tweepy/tweepy.git`
 
