@@ -81,32 +81,33 @@ tlm.create_list_intersection(multiple_lists,list_name)
 tlm.create_list_difference(list1,multiple_lists,list_name)
 ```
 
+### Other functions  
 
-The methods above are the main ones for the package. There are others, and most people won't have to bother with them. Just mentioning some of the other methods for coders who want to create their own functions based on them. (Have a look at [helpers.py](twitter_list_mgmt/helpers.py) to see how they've been defined.)
+The methods that have been listed are the main ones for the package. There are others, and most people won't have to bother with them. Will go through some of the other methods for coders who want to create their own functions. (Have a look at [helpers.py](twitter_list_mgmt/helpers.py) to see how they've been defined.)
 
-These Some of the other methods are:  
+Here are some of the other methods:  
   
-* Use this to automate the fetching of list ids from list urls. Returns the list_id as a string.
+* This one helps automate the fetching of list ids from list urls. Returns the list_id as a string.
 ```
 tlm.get_list_id_from_url(url)
 ```
 
-* Gets all the members of a twitter list, and returns a python list of their user ids.
+* Get all the members of a twitter list. The function returns a python list of their user ids.
 ```
 tlm.get_list_members_ids(list_idx)
 ```
 
-* Adds user ids to a list you own. 'ids' here is a python list of user ids and 'list1' is the id for your twitter list.
+* Add user ids to a list you own. 'ids' here is a python list of user ids and 'list1' is the id for your twitter list.
 ```
 tlm.add_ids_to_list(ids,list1)
 ```
 
-* Removes user ids from a list you own. 'ids' here is a python list of user ids and 'list1' is the id for your twitter list.
+* Remove user ids from a list you own. 'ids' here is a python list of user ids and 'list1' is the id for your twitter list.
 ```
 tlm.remove_ids_from_list(ids,list1)
 ```
 
-* This creates a pandas dataframe from a list, with each row a different member and each column an attribute like number of followers, number of tweets posted etc. This is for anyone who wants to analyze the membership of a list.
+* Create a pandas dataframe from a list, with each row a different member and each column an attribute like number of followers, number of tweets posted etc. This is for anyone who wants to analyze the membership of a list.
 ```
 tlm.get_df_from_list(list_idx)
 ```
