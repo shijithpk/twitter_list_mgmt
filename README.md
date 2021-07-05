@@ -40,12 +40,12 @@ import twitter_list_mgmt as tlm
 
 There are 7 main methods in the package:  
 
-1. This method allows you to add members to one of your lists from another list. Here list1 and list2 are twitter list ids, with list1 being the one you own. (You can get the ids from the url for a list page. For example, in the url https://twitter.com/i/lists/15299140, the list id is '15299140'.)
+**1.** This method allows you to add members to one of your lists from another list. Here list1 and list2 are twitter list ids, with list1 being the one you own. (You can get the ids from the url for a list page. For example, in the url https://twitter.com/i/lists/15299140, the list id is '15299140'.)
 ```
 tlm.add_to_list1_from_list2(list1, list2)
 ```
 
-2. This is the same as the previous method, just that it adds to your list from several lists. 'multiple_lists' is a python list of twitter list ids.
+**2.** This is the same as the previous method, just that it adds to your list from several lists. 'multiple_lists' is a python list of twitter list ids.
 ```
 tlm.add_to_list1_from_multiple_lists(list1, multiple_lists)
 ```
