@@ -2,7 +2,7 @@
 
 This is a python package that makes it easier to add users to your Twitter list from other lists.
 
-Say you've created a covid twitter list to keep track of news around the pandemic. You've just found another list on covid curated by an epidemiologist in London, and you want to add members from that list to your own Covid list. This is the package you use for that.
+Say you've created a covid twitter list to keep track of news around the pandemic. You've just found another list on covid curated by an epidemiologist in London, and you want to add members from it to your own Covid list. This is the package you use for that.
 
 This package will help heavy twitter and tweetdeck users, especially those who use lists to manage the firehose of information from social media.
 
@@ -14,7 +14,7 @@ You can install it by going to the terminal and typing
 pip install twitter_list_mgmt
 ```
 
-Versions of Tweepy >= 4.0.0a0 are required for this package to work. At the time of writing, 4.0 is in alpha, so it might not be available from [pypi](https://pypi.org/project/tweepy/#history). Install it in the terminal by doing
+Versions of Tweepy >= 4.0.0a0 are required for this package to work. At the time of writing, 4.0 is in alpha, so it might not be available from [pypi](https://pypi.org/project/tweepy/#history). Install it from the terminal by doing
 ```
 pip install git+https://github.com/tweepy/tweepy.git
 ```
@@ -48,7 +48,7 @@ tlm.add_to_list1_from_list2(list1, list2)
 tlm.add_to_list1_from_multiple_lists(list1, multiple_lists)
 ```
 
-**3.** **Remove users from your list who are in another list** — Let's say you have a twitter list that's a mix of designers and developers, and you want it to have designers only. You can remove many of the developers from it by getting a curated list of developers. Using this function, if any developers are in that list, they'll be removed from your list. 'list1' here is the list you own.
+**3.** **Remove users from your list who are in another list** — Let's say you have a twitter list on covid that's a mix of experts and journalists, and you want it to have experts only. Now you can remove many of the journalists from it manually, but you can also do it in an automated fashion by getting a list of science/health journalists. Using this function, if any of your list members are on that journalist list, they'll be removed. 'list1' here is your list.
 ```
 tlm.remove_from_list1_based_on_list2(list1, list2)
 ```
@@ -75,7 +75,7 @@ tlm.create_list_difference(list1,multiple_lists,list_name)
 
 ### Other things you can do
 
-The functions that have been listed are the main ones. There are other functions too, but most people won't have a need for them. Will go through some of them for coders who want to create their own functions based on them. (Have a look at [helpers.py](twitter_list_mgmt/helpers.py) to see how they've been defined.)
+The functions that have been listed are the main ones. There are others too, but most people won't have a need for them. Will go through some of them for coders who want to build something based on them. (Take a look at [helpers.py](twitter_list_mgmt/helpers.py) to see how they've been defined.)
 
 These are some of the other functions:  
   
