@@ -26,10 +26,10 @@ setup(
     keywords='twitter, lists, lifehack, lifehacker',
     packages=['twitter_list_mgmt'],
     zip_safe=False,
-    python_requires='>=3.8',
+    python_requires='>=3.6',
     install_requires=[
-        'tweepy==4.0.0a0',
-        'pandas==1.2.3'
+        'tweepy>=4.0.0a0',
+        'pandas>=1.2.3'
     ],
     project_urls={
          'Source': 'https://github.com/shijithpk/twitter-list-management'
