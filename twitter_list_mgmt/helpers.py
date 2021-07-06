@@ -207,7 +207,7 @@ def get_list_id_from_url(url):
     return list_id
 
 
-def get_df_from_list(list_idx):
+def create_df_from_list(list_idx):
     """
     This takes a twitter_list 'list_idx' and converts it into a pandas dataframe for analysis. 
     """
