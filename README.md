@@ -125,4 +125,4 @@ tlm.create_df_from_list(list_idx)
 ### Suggestions, criticism etc.
 I'm not a professional developer/programmer/coder, so am sure there are things here I should be doing differently. If you have any suggestions, please contact me on mail@shijith.com or at my twitter handle [@shijith](https://twitter.com/shijith).
 
-For example, I would be interested in hearing about my python application layout, whether it could be simplified further, if I could be doing imports better etc.
+For example, I would be interested in hearing about my python application layout. Whether it could be simplified further, if I could be doing imports better etc.
