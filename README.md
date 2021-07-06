@@ -8,7 +8,7 @@ This package will help heavy twitter and tweetdeck users, especially those who u
 
 ### List of functions 
 
-Here is what all you can do with the twitter-list-mgmt package:
+Here's what you can do with the twitter-list-mgmt package:
 * Main functions
     * [Add members to your list from another list](#1)
     * [Add members to your list from multiple lists](#2)
