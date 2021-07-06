@@ -4,7 +4,7 @@ This is a python package that makes it easier to add users to your Twitter list 
 
 Say you've created a covid twitter list to keep track of news around the pandemic. You've just found another list on covid curated by an epidemiologist in London, and you want to add members from it to your own Covid list. This is the package you use for that.
 
-This package will help heavy twitter and tweetdeck users, especially those who use lists to manage the firehose of information.
+This package will help heavy twitter and tweetdeck users, especially those who use lists to manage the firehose of information from social media.
 
 
 ### How to install the package and set things up
@@ -75,7 +75,7 @@ tlm.create_list_difference(list1,multiple_lists,list_name)
 
 ### Other things you can do
 
-The functions that have been listed are the main ones. There are others too, but most people won't have a need for them. Will go through some of them for coders who want to build something based on them. (Take a look at [helpers.py](twitter_list_mgmt/helpers.py) to see how they've been defined.)
+The functions that have been listed are the main ones. There are others too, but most people won't have a need for them. Will go through some of those functions for coders who want to build something on top of them. (Go through [helpers.py](twitter_list_mgmt/helpers.py) to see how they've been defined.)
 
 These are some of the other functions:  
   
@@ -107,4 +107,4 @@ tlm.get_df_from_list(list_idx)
 ### Suggestions, criticism etc.
 I'm not a professional developer/programmer/coder, so am sure there are things here I should be doing differently. If you have any suggestions, please contact me on mail@shijith.com or at my twitter handle [@shijith](https://twitter.com/shijith).
 
-For example, I would be especially interested in hearing about my python application layout, whether it could be simplified further, if I could be doing imports better etc.
+For example, I would be interested in hearing about my python application layout, whether it could be simplified further, if I could be doing imports better etc.
