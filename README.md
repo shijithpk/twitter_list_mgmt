@@ -4,7 +4,7 @@ This is a python package that makes it easier to add users to your Twitter list 
 
 Say you've created a covid twitter list to keep track of news around the pandemic. You've just found another list on covid curated by an epidemiologist in London, and you want to add members from that list to your own Covid list. This is the package you use for that.
 
-This package will help heavy twitter and tweetdeck users, especially those those who use lists to manage the firehose of information that is social media.
+This package will help heavy twitter and tweetdeck users, especially those who use lists to manage the firehose of information that is social media.
 
 
 ### How to install the package and set things up
@@ -38,37 +38,37 @@ import twitter_list_mgmt as tlm
 
 There are **7** main methods in the package:  
 
-**1.** This method allows you to add members to one of your lists from another list. Here list1 and list2 are twitter list ids, with list1 being the one you own. (You can get the ids from the url for a list page. For example, in the url https://twitter.com/i/lists/15299140, the list id is '15299140'.)
+**1.** This method allows you to **add members to one of your lists from another list**. Here list1 and list2 are twitter list ids, with list1 being the one you own. (You can get the ids from the url for a list page. For example, in the url https://twitter.com/i/lists/15299140, the list id is '15299140'.)
 ```
 tlm.add_to_list1_from_list2(list1, list2)
 ```
 
-**2.** This is the same as the previous method, just that it adds to your list from several lists. 'multiple_lists' is a python list of twitter list ids.
+**2.** This is the same as the previous method, just that it **adds to your list from several lists**. 'multiple_lists' is a python list of twitter list ids.
 ```
 tlm.add_to_list1_from_multiple_lists(list1, multiple_lists)
 ```
 
-**3.** Remove members from your list who are in another list with this method, 'list1' being your list. Let's say you have a twitter list that's a mix of designers and developers, and you want it to have designers only. You can remove many of the developers from it by getting a curated list of developers. Using this function, if any developers are in that list, they'll be removed from your list.
+**3.** **Remove users from your list who are in another list** with this method, 'list1' being your list. Let's say you have a twitter list that's a mix of designers and developers, and you want it to have designers only. You can remove many of the developers from it by getting a curated list of developers. Using this function, if any developers are in that list, they'll be removed from your list.
 ```
 tlm.remove_from_list1_based_on_list2(list1, list2)
 ```
 
-**4.** This removes members from your list using several other twitter lists.
+**4.** This **removes members from your list who are in any of the other lists specified**.
 ```
 tlm.remove_from_list1_based_on_multiple_lists(list1,multiple_lists)
 ```
 
-**5.** This creates a new list that consolidates members from several lists. 'multiple_lists' is the python list containing the twitter list ids and 'list_name' is the name for the new list.
+**5.** This **creates a new list that consolidates members from several lists**. 'multiple_lists' is the python list containing the twitter list ids and 'list_name' is the name for the new list.
 ```
 tlm.create_list_union(multiple_lists,list_name)
 ```
 
-**6.** This creates a new list that has members common to several lists. 'multiple_lists' is the python list containing the twitter list ids and 'list_name' is the name for the new list.
+**6.** This **creates a new list that has members common to several lists**. 'multiple_lists' is the python list containing the twitter list ids and 'list_name' is the name for the new list.
 ```
 tlm.create_list_intersection(multiple_lists,list_name)
 ```
 
-**7.** This creates a new list which has all the members from 'list1' who aren't in any of the lists in 'multiple_lists'. 'list1' can be your own list or someone else's, 'multiple_lists' is a python list of twitter list ids and 'list_name' is the name for the new list.
+**7.** **This creates a new list which has all the members from a list who aren't in any of the other lists specified**. 'list1' can be your own list or someone else's, 'multiple_lists' is a python list of twitter list ids and 'list_name' is the name for the new list.
 ```
 tlm.create_list_difference(list1,multiple_lists,list_name)
 ```
