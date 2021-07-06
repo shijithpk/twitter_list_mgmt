@@ -4,7 +4,7 @@ This is a python package that makes it easier to add users to your Twitter list 
 
 Say you've created a covid twitter list to keep track of news around the pandemic. You've just found another list on covid curated by an epidemiologist in London, and you want to add members from that list to your own Covid list. This is the package you use for that.
 
-This package will help heavy twitter and tweetdeck users, especially those who use lists to manage the firehose of information that is social media.
+This package will help heavy twitter and tweetdeck users, especially those who use lists to manage the firehose of information from social media.
 
 
 ### How to install the package and set things up
