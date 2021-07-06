@@ -36,70 +36,70 @@ Import the package into your code with
 import twitter_list_mgmt as tlm
 ```
 
-There are **7** main methods in the package:  
+The package has **7** main functions:  
 
-**1.** This method allows you to **add members to one of your lists from another list**. Here list1 and list2 are twitter list ids, with list1 being the one you own. (You can get the ids from the url for a list page. For example, in the url https://twitter.com/i/lists/15299140, the list id is '15299140'.)
+**1.** **Add members to your list from another list** — Here 'list1' and 'list2' are twitter list ids, with list1 being the one you own. (You can get the ids from the url for a list page. For example, in the url https://twitter.com/i/lists/15299140, the list id is '15299140'.)
 ```
 tlm.add_to_list1_from_list2(list1, list2)
 ```
 
-**2.** This is the same as the previous method, just that it **adds to your list from several lists**. 'multiple_lists' is a python list of twitter list ids.
+**2.** **Add members to your list from several other lists** — 'multiple_lists' is a python list of twitter list ids.
 ```
 tlm.add_to_list1_from_multiple_lists(list1, multiple_lists)
 ```
 
-**3.** **Remove users from your list who are in another list** with this method, 'list1' being your list. Let's say you have a twitter list that's a mix of designers and developers, and you want it to have designers only. You can remove many of the developers from it by getting a curated list of developers. Using this function, if any developers are in that list, they'll be removed from your list.
+**3.** **Remove users from your list who are in another list** — Let's say you have a twitter list that's a mix of designers and developers, and you want it to have designers only. You can remove many of the developers from it by getting a curated list of developers. Using this function, if any developers are in that list, they'll be removed from your list. 'list1' here is the list you own.
 ```
 tlm.remove_from_list1_based_on_list2(list1, list2)
 ```
 
-**4.** This **removes members from your list who are in any of the other lists specified**.
+**4.** **Remove members from your list who are in any of the other lists specified**
 ```
 tlm.remove_from_list1_based_on_multiple_lists(list1,multiple_lists)
 ```
 
-**5.** This **creates a new list that consolidates members from several lists**. 'multiple_lists' is the python list containing the twitter list ids and 'list_name' is the name for the new list.
+**5.** **Create a new list that consolidates members from several lists** — 'multiple_lists' is the python list containing the twitter list ids and 'list_name' is the name for the new list.
 ```
 tlm.create_list_union(multiple_lists,list_name)
 ```
 
-**6.** This **creates a new list that has members common to several lists**. 'multiple_lists' is the python list containing the twitter list ids and 'list_name' is the name for the new list.
+**6.** **Create a new list that has members common to several lists** — 'multiple_lists' is the python list containing the twitter list ids and 'list_name' is the name for the new list.
 ```
 tlm.create_list_intersection(multiple_lists,list_name)
 ```
 
-**7.** **This creates a new list which has all the members from a list who aren't in any of the other lists specified**. 'list1' can be your own list or someone else's, 'multiple_lists' is a python list of twitter list ids and 'list_name' is the name for the new list.
+**7.** **Create a new list with all the members from a list, who aren't in any of the other lists specified** — 'list1' can be your own list or someone else's, 'multiple_lists' is a python list of twitter list ids and 'list_name' is the name for the new list.
 ```
 tlm.create_list_difference(list1,multiple_lists,list_name)
 ```
 
 ### Other things you can do
 
-The methods that have been listed are the main ones. There are other methods too, but most people won't have a need for them. Will go through some of them for coders who want to create their own functions based on them. (Have a look at [helpers.py](twitter_list_mgmt/helpers.py) to see how they've been defined.)
+The functions that have been listed are the main ones. There are other functions too, but most people won't have a need for them. Will go through some of them for coders who want to create their own functions based on them. (Have a look at [helpers.py](twitter_list_mgmt/helpers.py) to see how they've been defined.)
 
-These are some of the other methods:  
+These are some of the other functions:  
   
-* This one helps automate the fetching of list ids from list urls. Returns the list_id as a string.
+* **Extract the list id from a list url** — Returns the list_id as a string.
 ```
 tlm.get_list_id_from_url(url)
 ```
 
-* Get all the members of a twitter list. The function returns a python list of their user ids.
+* **Get all the members of a list** — The function returns a python list of their user ids.
 ```
 tlm.get_list_members_ids(list_idx)
 ```
 
-* Add user ids to a list you own. 'ids' here is a python list of user ids and 'list1' is the id for your twitter list.
+* **Add user ids to a list** — 'ids' here is a python list of user ids and 'list1' is the id for your twitter list.
 ```
 tlm.add_ids_to_list(ids,list1)
 ```
 
-* Remove user ids from a list you own. 'ids' here is a python list of user ids and 'list1' is the id for your twitter list.
+* **Remove user ids from a list** — 'ids' here is a python list of user ids and 'list1' is the id for your twitter list.
 ```
 tlm.remove_ids_from_list(ids,list1)
 ```
 
-* Create a pandas dataframe from a list, with each row a different member and each column an attribute like number of followers, number of tweets posted etc. This is for anyone who wants to analyze the membership of a list.
+* **Create a pandas dataframe from a list** — Here, each row is for a different member and each column an attribute like number of followers, number of tweets posted etc. This is for anyone who wants to analyze the membership of a list.
 ```
 tlm.get_df_from_list(list_idx)
 ```
