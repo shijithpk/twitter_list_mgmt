@@ -1,14 +1,16 @@
 ### About the repo 
 
-This is a python package that makes it easier to add users to your Twitter list from other lists.
+`twitter_list_mgmt` is a python package that makes it easier to add users to your twitter list from other lists.
 
-Say you've created a covid twitter list to keep track of news around the pandemic. You've just found another list on covid curated by an epidemiologist in London, and you want to add members from it to your own Covid list. This is the package you use for that.
+Say you've created a covid twitter list to keep track of news around the pandemic. You've just found another list on covid curated by an epidemiologist in London, and you want to add members from that to your own Covid list. This is the package you use for it.
+
+Now for most basic operations like retrieving the current membership of a Twitter list, adding users to it, removing them etc. the [Tweepy](https://github.com/tweepy/tweepy) library is good enough. `twitter_list_mgmt` just adds extra functionality on top of Tweepy to make working with lists easier.
 
 This package will help heavy twitter and tweetdeck users, especially those who use lists to manage the firehose of information from social media.
 
 ### List of functions 
 
-Here's what you can do with the twitter-list-mgmt package:
+Here's what you can do with the `twitter_list_mgmt` package:
 * Main functions
     * [Add members to your list from another list](#1)
     * [Add members to your list from multiple lists](#2)
@@ -27,17 +29,17 @@ Here's what you can do with the twitter-list-mgmt package:
 
 ### How to install the package and set things up
 
-You can install it by going to the terminal and typing  
-```
-pip install twitter_list_mgmt
-```
-
-Versions of Tweepy >= 4.0.0a0 are required for this package to work. At the time of writing, 4.0 is in alpha, so it might not be available from [pypi](https://pypi.org/project/tweepy/#history). Install it from the terminal by doing
+Versions of Tweepy >= 4.0.0a0 are required for this package to work. At the time of writing, 4.0.0 isn't available in [pypi](https://pypi.org/project/tweepy/#history). Install it from the terminal by doing
 ```
 pip install git+https://github.com/tweepy/tweepy.git
 ```
 
-In terms of setting up, you'll have to [create](https://developer.twitter.com/) authentication credentials for yourself. (This [article](https://realpython.com/twitter-bot-python-tweepy/) from Realpython has a how-to on it.) Four text strings will be generated -- Consumer Key, Consumer Secret, Access Token and Access Token Secret. Create a file named 'config_twitter.ini', use the format below and paste in the credentials (You can also download a sample file [here](twitter_list_mgmt/config_twitter.ini).)
+Then install the main package by going to the terminal and typing  
+```
+pip install twitter_list_mgmt
+```
+
+In terms of setting up, you'll have to [create](https://developer.twitter.com/) authentication credentials for yourself. (This [article](https://realpython.com/twitter-bot-python-tweepy/) from Realpython has a how-to on it.) Four text strings will be generated -- Consumer Key, Consumer Secret, Access Token and Access Token Secret. Create a file named 'config_twitter.ini', use the format below and paste in the credentials. You can also download a sample file [here](twitter_list_mgmt/config_twitter.ini). Place the config in the same directory and on the same level as your script.
 
 ```
 [info]
@@ -61,22 +63,22 @@ The package has **7** main functions:
 tlm.add_to_list1_from_list2(list1, list2)
 ```
 
-**2.** <a name="2"></a>**Add members to your list from several other lists** — 'multiple_lists' is a python list of twitter list ids.
+**2.** <a name="2"></a>**Add members to your list from several other lists** — 'multiple_lists' is a python list of twitter list ids. (To comply with Twitter's rate limits, only upto 1000 members can be added in a day.)
 ```
 tlm.add_to_list1_from_multiple_lists(list1, multiple_lists)
 ```
 
-**3.** <a name="3"></a>**Remove members from your list who are in another list** — Let's say you have a twitter list on covid that's a mix of experts and journalists, and you want it to have experts only. Now you can remove many of the journalists from it manually, but you can also do it in an automated fashion by getting a list of science/health journalists. Using this function, if any of your list members are on that journalist list, they'll be removed. 'list1' here is your list.
+**3.** <a name="3"></a>**Remove members from your list who are in another list** — Let's say you have a twitter list on covid that's a mix of experts and journalists, and you want it to have experts only. Now you can remove many of the journalists from it manually, but you can also do it in an automated fashion by getting a list of science/health journalists. Using this function, if any of your list members are on that journalist list, they'll be removed. 'list1' here is your list id.
 ```
 tlm.remove_from_list1_based_on_list2(list1, list2)
 ```
 
-**4.** <a name="4"></a>**Remove members from your list who are in any of the other lists specified**
+**4.** <a name="4"></a>**Remove members from your list who are in any of the other lists specified** — 'list1' here is your list id and 'multiple_lists' is a python list of twitter list ids.
 ```
 tlm.remove_from_list1_based_on_multiple_lists(list1,multiple_lists)
 ```
 
-**5.** <a name="5"></a>**Create a new list that combines members from several lists** — 'multiple_lists' is the python list containing the twitter list ids and 'list_name' is the name for the new list.
+**5.** <a name="5"></a>**Create a new list that combines members from several lists** — 'multiple_lists' is the python list containing the twitter list ids and 'list_name' is the name for the new list. (The Twitter list created is set as 'private' but can be made 'public' later.)
 ```
 tlm.create_list_union(multiple_lists,list_name)
 ```
@@ -102,17 +104,17 @@ These are some of the other functions:
 tlm.get_list_id_from_url(url)
 ```
 
-* **Get all the members of a list**<a name="9"></a>  — The function returns a python list of their user ids.
+* **Get all the members of a list**<a name="9"></a>  — The function returns a python list of their user ids. Tweepy has a similar function [`get_list_members`](https://docs.tweepy.org/en/latest/api.html#tweepy.API.get_list_members) but that retrieves user objects. This function goes a step further by extracting the user ids within those objects.
 ```
 tlm.get_list_members_ids(list_idx)
 ```
 
-* **Add user ids to a list**<a name="10"></a>  — 'ids' here is a python list of user ids and 'list1' is the id for your twitter list.
+* **Add user ids to a list**<a name="10"></a>  — 'ids' here is a python list of user ids and 'list1' is a twitter list id.
 ```
 tlm.add_ids_to_list(ids,list1)
 ```
 
-* **Remove user ids from a list**<a name="11"></a>  — 'ids' here is a python list of user ids and 'list1' is the id for your twitter list.
+* **Remove user ids from a list**<a name="11"></a>  — 'ids' here is a python list of user ids and 'list1' is a twitter list id.
 ```
 tlm.remove_ids_from_list(ids,list1)
 ```

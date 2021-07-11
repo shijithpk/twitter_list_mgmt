@@ -1,2 +1,2 @@
-tweepy==4.0.0a0
-pandas==1.2.3
+pandas>=1.2.3
+tweepy>=4.0.0a0

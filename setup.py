@@ -6,7 +6,7 @@ long_descriptionx = (here / 'README.md').read_text(encoding='utf-8')
 
 setup(
     name='twitter_list_mgmt',
-    version='0.1',
+    version='0.1.1',
     description='A Python package for managing Twitter lists',
     long_description=long_descriptionx,
     long_description_content_type='text/markdown',

@@ -8,10 +8,8 @@ import configparser
 class getAPIHandle:
     def __init__(self):
         config = configparser.ConfigParser()
-        config.read('./config.ini')
-        # config.read('./config_twitter.ini')
-        #change to config_twitter.ini before putting it in github
-        # or should it be config.ini. CHECK WHICH ONE WORKS
+        config.read('./config_twitter.ini')
+
 
         CONSUMER_KEY = config['info']['CONSUMER_KEY']
         CONSUMER_SECRET = config['info']['CONSUMER_SECRET']
