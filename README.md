@@ -39,7 +39,7 @@ Then install the main package by going to the terminal and typing
 pip install twitter_list_mgmt
 ```
 
-In terms of setting up, you'll have to [create](https://developer.twitter.com/) authentication credentials for yourself. (This [article](https://realpython.com/twitter-bot-python-tweepy/) from Realpython has a how-to on it.) Four text strings will be generated -- Consumer Key, Consumer Secret, Access Token and Access Token Secret. Create a file named 'config_twitter.ini', use the format below and paste in the credentials. You can also download a sample file [here](twitter_list_mgmt/config_twitter.ini). Place the config in the same directory and on the same level as your script.
+In terms of setting up, you'll have to [create](https://developer.twitter.com/) authentication credentials for yourself. (This [article](https://realpython.com/twitter-bot-python-tweepy/) from Realpython has a how-to on it.) Four text strings will be generated -- Consumer Key, Consumer Secret, Access Token and Access Token Secret. Create a file named 'config_twitter.ini', use the format below and paste in the credentials without apostrophes. You can also download a sample file [here](twitter_list_mgmt/config_twitter.ini). Place the config in the same directory and on the same level as your script.
 
 ```
 [info]
